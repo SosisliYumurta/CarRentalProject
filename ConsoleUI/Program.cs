@@ -42,11 +42,6 @@ namespace ConsoleUI
             ///
 
 
-            SuccessResult result = new SuccessResult("asd");
-            Console.WriteLine(result.Success+ result.Message);
-
-
-
         }
     }
 }

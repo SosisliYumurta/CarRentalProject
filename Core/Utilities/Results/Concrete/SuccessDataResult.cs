@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Core.Utilities.Results.Concrete
 {
-    internal class SuccessDataResult
+    public class SuccessDataResult<T> : DataResult<T>
     {
+        public SuccessDataResult(T data, string message = null) : base(data, true, message)
+        {
+            
+        }
+        public SuccessDataResult(string message = null) : base(default,true, message)
+        {
+            
+        }
+        public SuccessDataResult() : base(default, true)
+        {
+            
+        }
+
     }
 }

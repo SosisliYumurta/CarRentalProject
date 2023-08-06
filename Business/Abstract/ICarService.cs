@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,9 @@ namespace Business.Abstract
 {
     public interface ICarService
     {
-        List<Car> GetAll();
-        List<Car> GetCarsByBrandId(int brandId);
-        List<Car> GetCarsByColorId(int colorId);
+        public IDataResult<List<Car>> GetAll();
+        public IDataResult<List<Car>> GetCarsByBrandId(int brandId);
+        public IDataResult<List<Car>> GetCarsByColorId(int colorId);
+        public IResult Add(Car car);
     }
 }
